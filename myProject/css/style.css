@@ -1,0 +1,253 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 12px; }
+
+body {
+  background: #f3f4f6 url(../img/wrap_bg.png) no-repeat 0 185px; }
+
+#header {
+  width: 100%;
+  background: #f9f9f9; }
+
+header {
+  width: 1190px;
+  height: 30px;
+  margin: 0 auto;
+  color: #666; }
+  header em {
+    background: url("../img/icon.png");
+    display: block; }
+  header a {
+    color: #666;
+    line-height: 30px; }
+    header a em {
+      float: left;
+      width: 11px;
+      height: 15px;
+      margin: 7px 3px 0 0; }
+    header a:hover {
+      color: #f74a4a;
+      text-decoration: underline; }
+  header i {
+    margin: 0 10px;
+    line-height: 30px;
+    color: #e7e7e7;
+    font-style: normal; }
+  header #head_left li {
+    float: left; }
+  header #head_left i {
+    float: left; }
+  header #head_right {
+    width: 600px;
+    float: right; }
+    header #head_right div {
+      float: right; }
+    header #head_right i {
+      float: right; }
+    header #head_right a em {
+      float: right;
+      margin-left: 12px;
+      background-position: 0 -52px; }
+    header #head_right a:hover em {
+      background-position: -20px -52px; }
+    header #head_right #right_last {
+      display: block;
+      margin-top: 5px;
+      padding-left: 8px;
+      line-height: 21px;
+      width: 72px;
+      height: 21px;
+      background: url("../img/icon.png") no-repeat -20px -334px; }
+
+#toper {
+  width: 100%; }
+
+#top {
+  width: 1190px;
+  height: 78px;
+  margin: 0 auto;
+  padding: 10px 0 20px 0; }
+  #top .logo {
+    background: url(../img/bg.png) no-repeat;
+    width: 320px;
+    height: 65px;
+    display: block;
+    margin-top: 5px;
+    float: left; }
+  #top .search {
+    margin: 10px 0 0 110px;
+    width: 490px;
+    display: inline;
+    float: left; }
+    #top .search .text {
+      width: 450px;
+      height: 34px;
+      border: 2px solid #f74a4a;
+      border-right: none;
+      float: left; }
+      #top .search .text .meun {
+        position: relative;
+        width: 116px;
+        height: 31px;
+        float: left;
+        color: #333;
+        border-right: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+        text-align: center;
+        line-height: 31px; }
+        #top .search .text .meun em {
+          background: url("../img/icon.png") no-repeat 0 -25px;
+          float: right;
+          width: 10px;
+          height: 6px;
+          display: block;
+          margin: 15px 10px 0 0; }
+      #top .search .text input {
+        width: 313px;
+        height: 32px;
+        padding: 2px 10px 0 10px;
+        line-height: 30px;
+        float: left;
+        color: #aaa8a8;
+        border: 0; }
+    #top .search button {
+      width: 38px;
+      height: 38px;
+      border: 0;
+      background: url("../img/btn.png") no-repeat;
+      cursor: pointer;
+      float: right; }
+      #top .search button:hover {
+        background-position-x: -39px; }
+  #top .tuiguang {
+    background: url("../img/codeznq.png") no-repeat;
+    margin: -10px 0 -20px 0;
+    width: 229px;
+    height: 108px;
+    float: right; }
+
+#naver {
+  width: 100%;
+  background: #3a3f4a; }
+
+nav {
+  width: 1190px;
+  height: 54px;
+  margin: 0 auto;
+  color: #acb1bb; }
+  nav .all_game {
+    width: 190px;
+    height: 54px;
+    float: left;
+    text-align: center;
+    position: relative; }
+    nav .all_game a {
+      color: #acb1bb;
+      font: 16px/32px 'Microsoft Yahei','榛戜綋';
+      display: block;
+      height: 41px;
+      padding-top: 10px;
+      border-bottom: 3px solid #3a3f4a; }
+    nav .all_game .box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: left; }
+      nav .all_game .box em {
+        background: url("../img/icon.png") no-repeat;
+        float: left;
+        width: 25px;
+        height: 25px;
+        margin: 21px 10px 0 22px; }
+      nav .all_game .box i {
+        width: 8px;
+        height: 11px;
+        background: url("../img/icon.png") no-repeat -178px -178px;
+        position: absolute;
+        top: 28px;
+        right: 10px;
+        overflow: hidden; }
+      nav .all_game .box .box_top dt {
+        background: #eb4c4c;
+        color: #ff9191;
+        height: 54px;
+        border: 0;
+        width: 190px;
+        line-height: 54px;
+        font-size: 16px;
+        box-shadow: 2px 0 0 rgba(0, 0, 0, 0.08); }
+        nav .all_game .box .box_top dt em {
+          background-position: 6px -178px;
+          margin-top: 14px; }
+      nav .all_game .box .box_bot dt {
+        width: 189px;
+        height: 64px;
+        color: #fff;
+        background: #f55656;
+        border: 1px solid #f55656;
+        border-bottom: 1px solid #ee4545;
+        border-right: 0;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 64px;
+        position: relative; }
+      nav .all_game .box .box_bot .a1 {
+        background-position: -148px -178px; }
+      nav .all_game .box .box_bot .a2 {
+        background-position: -28px -178px; }
+      nav .all_game .box .box_bot .a3 {
+        background-position: -60px -178px; }
+      nav .all_game .box .box_bot .a4 {
+        background-position: -88px -178px; }
+      nav .all_game .box .box_bot .a5 {
+        background-position: -119px -178px; }
+  nav ul {
+    width: 760px;
+    float: left; }
+    nav ul li {
+      width: 126px;
+      float: left;
+      text-align: center; }
+      nav ul li a {
+        display: block;
+        font: 16px/32px 'Microsoft Yahei','榛戜綋';
+        height: 41px;
+        color: #acb1bb;
+        padding-top: 10px;
+        border-bottom: 3px solid #3a3f4a; }
+  nav .car {
+    float: right; }
+    nav .car a {
+      display: inline-block;
+      height: 30px;
+      padding: 7px 0 4px 0;
+      line-height: 30px;
+      width: 230px;
+      margin-top: 5px;
+      font-size: 16px;
+      text-align: left;
+      background: #f74a4a;
+      color: #fff;
+      border-bottom: 2px solid #e4333333; }
+      nav .car a em {
+        display: block;
+        float: left;
+        width: 20px;
+        height: 16px;
+        margin: 8px 8px 0 42px;
+        background: url("../img/icon.png") no-repeat -60px -20px; }
+      nav .car a #carNum {
+        display: block;
+        float: right;
+        width: 60px;
+        border-left: 1px solid #e04040;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 18px;
+        text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
