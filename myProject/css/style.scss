@@ -8,6 +8,7 @@
 }
 body{
     background: #f3f4f6 url(../img/wrap_bg.png) no-repeat 0 185px;
+    font: 12px/1.6em Microsoft YaHei,Tahoma,simsun;
 }
 @mixin head($w,$h) {
     width: $w;
@@ -59,18 +60,105 @@ header{
         float: right;
         div{
             float: right;
+            position: relative;
+            p{
+                padding-bottom: 5px;
+                width: 94px;
+                background: #fff;
+                position: absolute;
+                display:none;
+                top: 1px;
+                left: -11px;
+                z-index: 1;
+                border: 1px solid #e7e7e7;
+                a{
+                    display: block;
+                    margin-top: 26px;
+                    padding-left: 10px;
+                    line-height: 26px;
+                    height: 26px;
+                }
+            }
+            .games{
+                position: absolute;
+                font: normal 12px Tahoma, "simsun";
+                width: 828px;
+                top: 30px;
+                right: 0;
+                z-index: 10000;
+                display: none;
+                .games_top{
+                    height: 11px;
+                    padding-left: 7px;
+                    background: url('../img/gamearea.png') no-repeat;
+                    overflow: hidden;
+                    span{
+                        display: block;
+                        width: 820px;
+                        height: 11px;
+                        background: url('../img/gamearea.png') no-repeat 100% 0;
+                    }
+                }
+                .games_main{
+                    float: left;
+                    background: url('../img/gamearea.png') no-repeat 0 bottom;
+                    padding-left:8px; 
+                    .games_inner{
+                        float: left;
+                        background: url('../img/gamearea.png') no-repeat 100% bottom;
+                        overflow: hidden;
+                        padding: 0 8px 7px 0;
+                        .games_names{
+                            float: left;
+                            h2{
+                                height: 33px;
+                                line-height: 33px;
+                                background: url('../img/gamearea.png') no-repeat 0 -13px;
+                                font-size: 12px;
+                                color: #0096d0;
+                                text-indent: 8px;
+                                border: 1px solid #d6d6d6;
+                                border-top: 0;
+                                border-left: 0;  
+                            }
+                            div{
+                                width: 102px;
+                                float: left;
+                                margin: 0 -1px 0 0;
+                                a{
+                                    display: block;
+                                    width: 85px;
+                                    height: 27px;
+                                    padding: 0 8px;
+                                    line-height: 27px;
+                                    background:url('../img/gamearea.png') no-repeat 0 -19px;
+                                    color: #464646;
+                                    text-decoration: none;
+                                    border: 1px solid #d6d6d6;
+                                    border-top: 0;
+                                    border-left: 0;
+                                    &:hover{
+                                        color: #0896D4;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
         }
         i{
             float: right;
         }
         a{
+            position: relative;
+            z-index: 2;
             em{
+                height: 13px;
                 float: right;
-                margin-left: 12px;
+                margin:7px 0 0 12px;
                 background-position: 0 -52px;
-            }
-            &:hover em{
-                background-position: -20px -52px;
             }
         }
         #right_last{
@@ -86,6 +174,7 @@ header{
 }
 #toper{
     width: 100%;
+    background: #fff;
 }
 #top{
     @include head(1190px,78px);
@@ -116,7 +205,7 @@ header{
                 float: left;
                 color: #333;
                 border-right: 1px solid #efefef;
-                border-bottom: 1px solid #efefef;
+                border-bottom: 3px solid #efefef;
                 text-align: center;
                 line-height: 31px;
                 em{
@@ -126,6 +215,22 @@ header{
                     height: 6px;
                     display: block;
                     margin: 15px 10px 0 0;
+                }
+            }
+            .meun_games{
+                position: absolute;
+                z-index: 1;
+                top: 36px;
+                left: 0;
+                border: 1px solid #e5e5e5;
+                width: 395px;
+                padding: 0 10px;
+                background: #fff;
+                dl{
+                    border-top: 1px solid #e5e5e5;
+                    padding: 10px;
+                    margin-top: -1px;
+                    line-height: 26px;
                 }
             }
             input{
@@ -296,6 +401,52 @@ nav{
                 font-weight: 800;
                 font-size: 18px;
                 text-align: center;
+            }
+        }
+    }
+}
+#mainer{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#main{
+    @include head(1190px,330px);
+    #banner{
+        width: 770px;
+        height: 330px;
+        margin-left: 190px;
+        position: relative;
+        #pic{
+            position: absolute;
+            #lb{
+                float: left;
+                position: absolute;
+                a{
+                    display: block;
+                }
+                img{
+                    display: block;
+                }
+                s{
+                    display: block;
+                    width: 770px;
+                    height: 40px;
+                    background: #000;
+                    opacity: .6;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+                p{
+                    position: absolute;
+                    width: 750px;
+                    padding: 0 10px;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #fff;
+                    bottom: 0;
+                    left: 0;
+                }
             }
         }
     }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.3.js"></script>
 </head>
 <body>
     <div id="header">
@@ -20,17 +21,128 @@
                 <li><a href="">心悦游戏家</a></li>
             </ul>
             <div id="head_right">
-                <div><a href="javascript:;" id="right_last">游戏导航</a></div>
+                <div class="games_hover">
+                    <a href="javascript:;" id="right_last">游戏导航</a>
+                    <div class="games">
+                        <div class="games_top">
+                            <span></span>
+                        </div>
+                        <div class="games_main">
+                            <div class="games_inner">
+                                <div class="games_names">
+                                    <h2>角色扮演</h2>
+                                    <div>
+                                        <a href="">冒险岛2</a>
+                                        <a href="">御龙在天经典版</a>
+                                        <a href="">怪物猎人OL</a>
+                                        <a href="">天涯明月刀</a>
+                                        <a href="">上古世纪</a>
+                                        <a href="">QQ仙灵</a>
+                                        <a href="">疾风之刃</a>
+                                    </div>
+                                    <div>
+                                        <a href="">QQ幻想</a>
+                                        <a href="">刀剑2</a>
+                                        <a href="">寻仙</a>
+                                        <a href="">斗战神</a>
+                                        <a href="">轩辕传奇</a>
+                                        <a href="">剑灵</a>
+                                        <a href="">天堂2</a>
+                                    </div>
+                                    <div>
+                                        <a href="">天堂</a>
+                                        <a href="">幻想世界</a>
+                                        <a href="">QQ仙侠传</a>
+                                        <a href="">地下城与勇士</a>
+                                        <a href="">QQ三国</a>
+                                        <a href="">御龙在天</a>
+                                        <a href="">自由幻想</a>
+                                    </div>
+                                </div>
+                                <div class="games_names">
+                                    <h2>竞技游戏</h2>
+                                    <div>
+                                        <a href="">使命召唤</a>
+                                        <a href="">英雄联盟</a>
+                                        <a href="">穿越火线</a>
+                                        <a href="">逆战</a>
+                                        <a href="">NBA2KOL</a>
+                                        <a href="">枪神纪</a>
+                                        <a href="">战地之王</a>
+                                    </div>
+                                    <div>
+                                        <a href="">FIFA Online3</a>
+                                        <a href="">战争雷霆</a>
+                                        <a href="">极品飞车OL</a>
+                                    </div>
+                                </div>
+                                <div class="games_names">
+                                    <h2>休闲游戏</h2>
+                                    <div>
+                                        <a href="">炫舞时代</a>
+                                        <a href="">QQ炫舞</a>
+                                        <a href="">QQ音速</a>
+                                        <a href="">QQ飞车</a>
+                                    </div>
+                                </div>
+                                <div class="games_names">
+                                    <h2>网页游戏</h2>
+                                    <div>
+                                        <a href="">英魂之刃</a>
+                                        <a href="">火影忍者OL</a>
+                                        <a href="">夜店之王</a>
+                                        <a href="">部落保卫战</a>
+                                        <a href="">Q宠大乐斗</a>
+                                        <a href="">烽火战国</a>
+                                        <a href="">七雄争霸</a>
+                                    </div>
+                                    <div>
+                                        <a href="">猎鱼达人3D</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $('.games_hover').hover(function(){
+                            $(this).find('.games').css('display','block');
+                        },function(){
+                            $(this).find('.games').css('display','none');
+                        })
+                    </script>
+                </div>
                 <i>|</i>
                 <div><a href="">帮助中心</a></div>
                 <i>|</i>
-                <div><a href="">官方论坛<em></em></a></div>
+                <div class="erji">
+                    <a href="" class="a_1">官方论坛<em></em></a>
+                    <p>
+                        <a href="">官方微博</a>
+                    </p>
+                </div>
+                <script>
+                    $('.erji').hover(function(){
+                        $(this).find('p').css('display','block');
+                        $(this).find('em').css('background-position-x',-20)
+                        $(this).find('.a_1').css({
+                            'font-weight':'bold',
+                            'color':'#f74a4a'
+                        })
+                    },function(){
+                        $(this).find('p').css('display','none');
+                        $(this).find('em').css('background-position-x',0)
+                        $(this).find('.a_1').css({
+                            'font-weight':'100',
+                            'color':'#666'
+                        })
+                    })
+                </script>
                 <i>|</i>
                 <div><a href="">个人中心</a></div>
                 <i>|</i>
                 <div><a href="">我的订单</a></div>
                 <i>|</i>
-                <div>您还未登陆，请<a href="">登录</a></div>
+                <div>您还未登录，请<a href="">登录</a></div>
             </div>
         </header>
     </div>
@@ -43,6 +155,52 @@
                         <span>选择游戏</span>
                         <em></em>
                     </a>
+                    <div class="meun_games">
+                        <dl>
+                            <dt>角色扮演：</dt>
+                            <dl>
+                                <a href="">怪物猎人OL</a>
+                                <i>|</i>
+                                <a href="">QQ仙灵</a>
+                                <i>|</i>
+                                <a href="">天涯明月刀</a> 
+                                <i>|</i>
+                                <a href="">上古世纪</a> 
+                                <i>|</i>
+                                <a href="">斗战神</a>
+                                <i>|</i>
+                                <a href="">轩辕传奇</a> 
+                                <i>|</i>
+                                <a href="">寻仙</a> 
+                                <i>|</i>
+                                <a href="">剑灵</a> 
+                                <i>|</i>
+                                <a href="">天堂2</a> 
+                                <i>|</i>
+                                <a href="">幻想世界</a> 
+                                <i>|</i>
+                                <a href="">QQ仙侠传</a> 
+                                <i>|</i>
+                                <a href="">第九大陆</a> 
+                                <i>|</i>
+                                <a href="">地下城与勇士</a> 
+                                <i>|</i>
+                                <a href="">QQ三国</a> 
+                                <i>|</i>
+                                <a href="">御龙在天</a> 
+                                <i>|</i>
+                                <a href="">御龙在天经典版</a> 
+                                <i>|</i>
+                                <a href="">自由幻想</a> 
+                                <i>|</i>
+                                <a href="">QQ幻想</a> 
+                                <i>|</i>
+                                <a href="">刀剑2</a> 
+                                <i>|</i>
+                                <a href="">疾风之刃</a> 
+                            </dl>
+                        </dl>
+                    </div>
                     <input type="text" value="请选择游戏搜索道具">
                 </div>
                 <button></button>
@@ -80,7 +238,7 @@
             <ul>
                 <li><a href="">首页</a></li>
                 <li><a href="">活动中心</a></li>
-                <li><a href="">聚成品</a></li>
+                <li><a href="">聚诚品</a></li>
                 <li><a href="">手游中心</a></li>
                 <li><a href="">聚豆商城</a></li>
                 <li><a href="">个人中心</a></li>
@@ -89,6 +247,39 @@
                 <a href=""><em></em>购物车<i id="carNum">0</i></a>
             </div>
         </nav>
+    </div>
+    <div id="mainer">
+        <div id="main">
+            <div id="banner">
+                <div id="pic">
+                    <div id="lb">
+                        <a href=""><img src="img/20180929144343_473130.jpg"></a>
+                        <s></s>
+                        <p>CFPL售票得王者</p>
+                    </div>
+                    <div id="lb">
+                        <a href=""><img src="img/20181009101539_622494.jpg"></a>
+                        <s></s>
+                        <p>艾希手办开售</p>
+                    </div>
+                    <div id="lb">
+                        <a href=""><img src="img/20180928152239_704994.jpg"></a>
+                        <s></s>
+                        <p>冠军掠夺者卡兹克</p>
+                    </div>
+                    <div id="lb">
+                        <a href=""><img src="img/20181008164905_498066.jpg"></a>
+                        <s></s>
+                        <p>SS迈凯伦首发</p>
+                    </div>
+                    <div id="lb">
+                        <a href=""><img src="img/20181009151518_818769.jpg"></a>
+                        <s></s>
+                        <p>FIFA十月首充</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
