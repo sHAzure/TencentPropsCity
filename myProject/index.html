@@ -686,18 +686,110 @@
                             <p class="red">秒杀价：<b>24.50QB</b></p>
                             <p>
                                 <span id="time_daojishi">
-                                    <em class="num_bg">3</em>天
-                                    <em class="num_bg">3</em>时
-                                    <em class="num_bg">3</em>分
-                                    <em class="num_bg">3</em>秒
+                                    <em class="num_bg">0</em>天
+                                    <em class="num_bg">0</em>时
+                                    <em class="num_bg">0</em>分
+                                    <em class="num_bg">0</em>秒
                                 </span>
                             </p>
                             <a href="" class="buy_btn">查看详情</a>
                         </dd>
+                        <script>
+                            var days = document.getElementsByClassName('num_bg')[0];
+                            var hours = document.getElementsByClassName('num_bg')[1];
+                            var mins = document.getElementsByClassName('num_bg')[2];
+                            var seconds = document.getElementsByClassName('num_bg')[3];
+                            daoji();
+                            var daojishi = setInterval(daoji,1000);
+                            function daoji(){
+                                var dateEnd = new Date('2019/1/1,10:10:0');
+                                var dateNow = new Date();
+                                var leftTime = parseInt((dateEnd.getTime() - dateNow.getTime())/1000);
+                                var d = parseInt(leftTime / 3600 / 24);
+                                var h = parseInt(leftTime / 3600 % 24);
+                                var m = parseInt(leftTime / 60 % 60);
+                                var s = parseInt(leftTime % 60);
+                                days.innerHTML = d;
+                                hours.innerHTML = h;
+                                mins.innerHTML = m;
+                                seconds.innerHTML = s;
+                                if(leftTime <= 0){
+                                    clearInterval(daojishi);
+                                }
+                            }
+                            
+                           
+                        </script>
                         <dd class="djms">
                             独家秒杀
                         </dd>
                     </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content2er">
+        <div id="content2">
+            <div id="content2_left">
+                <div class="content1_left_top">
+                    <s></s>
+                    <em>猜你喜欢</em>
+                    <span>|</span>
+                    <a href="">换一换&gt;</a>
+                </div>
+                <div class="content2_left_bot">
+                    <div id="content2_left_bot_con">
+                        <dl>
+                            <dt><a href=""><img src="img/img_cnxh/boosts_10.jpg" alt=""></a></dt>
+                            <dd>
+                                <p><a href=""><b>[英雄联盟]</b>胜利经验卡(10胜)</a></p>
+                                <p class="red">商城价：<b>29.00QB</b></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="img/img_cnxh/boosts_1.jpg" alt=""></a></dt>
+                            <dd>
+                                <p><a href=""><b>[英雄联盟]</b>双倍金币卡(3日)</a></p>
+                                <p class="red">商城价：<b>22.00QB</b></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="img/img_cnxh/zhandijijiasikana190.jpg" alt=""></a></dt>
+                            <dd>
+                                <p><a href=""><b>[英雄联盟]</b>战地机甲 斯卡纳</a></p>
+                                <p class="red">商城价：<b>34.50QB</b></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="img/img_cnxh/103001.jpg" alt=""></a></dt>
+                            <dd>
+                                <p><a href=""><b>[英雄联盟]</b>高丽风情 阿狸</a></p>
+                                <p class="red">商城价：<b>10.00QB</b></p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="img/img_cnxh/658.jpg" alt=""></a></dt>
+                            <dd>
+                                <p><a href=""><b>[英雄联盟]</b>黑色荆棘 莫甘娜</a></p>
+                                <p class="red">商城价：<b>69.00QB</b></p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div id="content2_right">
+                <div id="content2_right_con">
+                    <div class="content1_left_top">
+                        <s></s>
+                        <em>每日签到</em>
+                    </div>
+                    <div class="content2_right_con_bot">
+                        <a href="" class="buy_btn content2_right_con_bot_top"><s></s>我要签到</a>
+                        <div class="content2_right_con_bot_bot">
+                            <p>今日签到可获得5个聚豆</p>
+                            <p><a href="">下载手机道聚城最高可获得40聚豆</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
