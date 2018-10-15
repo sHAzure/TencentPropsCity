@@ -1,0 +1,227 @@
+@charset "utf-8";
+html,body{
+    font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+    height: 100%;
+}
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/*------------logo--------------*/
+.logo{
+    display: block;
+    background: url('../img/register/logo.png') no-repeat;
+    height: 43px;
+    line-height: 43px;
+    padding-left: 46px;
+    margin:18px 0 0 30px;
+    font-size: 36px;
+    color: #000;
+    z-index: 2;
+    position: fixed;
+}
+/*------------轮播------------------*/
+#banner{
+    width: 480px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    float: left;
+    overflow: hidden;
+    background: url('../img/register/1.jpg') no-repeat;
+    background-size: cover;
+}
+/*------------头部------------------*/
+#header{
+    overflow: hidden;
+    &>div{
+        float: right;
+        margin: 20px 40px 0 0;
+        font-size: 16px;
+        padding:10px 0 0;
+        line-height: 24px;
+    }
+    .feedback{
+        margin-right: 60px;
+        a{
+            color: #000;
+            opacity: .6;
+            text-align: right;
+            &:hover{
+                opacity:1;
+            }
+        }
+    }
+    .chinese{
+        color: #000;
+        div{
+            opacity: .6;
+            .down{
+                display: inline-block;
+            }
+            .up{
+               display: none; 
+            }
+        }
+        ul{
+            display: none;
+            padding-top: 8px;
+            text-align: left;
+            li{
+                opacity: .6;
+                padding-top: 16px;
+            }
+        }
+    }
+    .emailName{
+        a{
+            opacity: .6;
+            color: #000;
+            display: block;
+            background: url('../img/register/mail-entry.png') no-repeat;
+            height: 15px;
+            line-height: 15px; 
+            padding: 0 0 0 25px;
+            margin: 4.5px 0;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .lianghao{
+        padding: 0;
+        a{
+            display: block;
+            float: right;
+            position: relative;
+            div{
+                border-radius: 6px;
+                background: linear-gradient(126deg,#fc4754,#ff794c) #f54444;
+                height: 24px;
+                line-height: 24px;
+                font-size: 16px;
+                margin: 10px 0 0 5px;
+                padding: 0 10px 0 24px;
+                color: #fff;
+                font-weight: 300;
+            }
+            img{
+                position: absolute;
+                left:0;
+                bottom: 0;
+            }
+        }
+        .lianghao_yc{
+            display: none;
+            clear: both;
+            width: 290px;
+            border-radius: 6px;
+            border: solid 1px #eee;
+            background-color: #fff;
+            box-shadow: 0 3px 8px 0 rgba(0,0,0,.12);
+            overflow: hidden;
+            padding: 0;
+            .upper{
+                border-bottom: 1px solid #f0f0f0;
+                height: 49px;
+                position: relative;
+                a{
+                    display: block;
+                    height: 49px;
+                    width: 40px;
+                    border-left:1px solid #eee;
+                    float: right;
+                    img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                    &:hover{
+                        background:orangered;
+                    }
+                }
+                input{
+                    border: none;
+                    width: 229px;
+                    height: 49px;
+                    line-height: 49px;
+                    font-size: 16px;
+                    padding: 0 10px;
+                }
+            }
+            .downer{
+                padding-top: 24px;
+                font-size: 16px;
+                text-align: center;
+                line-height: 16px;
+                div{
+                    overflow: hidden;
+                    margin-bottom: 24px;
+                }
+                a{
+                    display: inline;
+                    float: none;
+                    margin: 0 5px;
+                    color: #359eff;
+                }
+            }
+        }
+    }
+}
+/*------------主体------------------*/
+#main_wrap{
+    margin-left: 480px;
+    margin-top: 50px;
+}
+#main{
+    width: 480px;
+    margin: 0 auto;
+    #main_top{
+        .main_top_top{
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+        .main_top_bot{
+            line-height: 1.2;
+            a{
+                display: block;
+                float: right;
+                font-size: 24px;
+                color: #359eff;
+                &:hover{
+                    color: #2b72ff;
+                }
+            }
+            h3{
+                font-size: 28px;
+                margin-bottom: 64px;
+                color: #333;
+                font-weight: normal;
+            }
+        }
+        
+    }
+    #main_min{
+        height: 488px;
+        input{
+            margin-top: 24px;
+            border: 1px #aaa solid;
+            border-radius: 4px;
+            text-align: left;
+            font-size: 20px;
+            width: 438px;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+        }
+        #uname{
+            margin-top: 0;
+        }
+    }
+}

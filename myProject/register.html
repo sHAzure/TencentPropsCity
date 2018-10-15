@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QQ注册</title>
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <a href="" class="logo">QQ</a>
+    <div id="banner"></div>
+    <script>
+        var indexA = 1;
+        setInterval(function(){
+            indexA ++;
+            $('#banner').css('background-image',"url('img/register/" + (indexA % 4 + 1) + ".jpg')")
+        },2000);
+    </script>
+    <div id="header">
+        <div class="feedback">
+            <a href="">意见反馈</a>
+        </div>
+        <div class="chinese">
+            <div>简体中文
+                <img src="img/register/down.png" alt="" class="down">
+                <img src="img/register/up.png" class="up">
+            </div>
+            <ul>
+                <li>繁體中文</li>
+                <li>English</li>
+            </ul>
+            <script>
+                $('.chinese').hover(function(){
+                    $(this).find('div').css('opacity','1');
+                    $(this).find('.up').css('display','inline-block');
+                    $(this).find('.down').css('display','none');
+                    $(this).find('ul').css('display','block').on('mouseenter','li',function(){
+                        $(this).css({
+                            'cursor':'pointer',
+                            'opacity':1
+                        });
+                    }).on('mouseleave','li',function(){
+                        $(this).css('opacity',.6);
+                    });
+                },function(){
+                    $(this).find('div').css('opacity','.6');
+                    $(this).find('.up').css('display','none');
+                    $(this).find('.down').css('display','inline-block');
+                    $(this).find('ul').css('display','none');
+                });
+            </script>
+        </div>
+        <div class="emailName">
+            <a href="">邮箱账号</a>
+        </div>
+        <div class="lianghao">
+            <a href="">
+                <div>QQ靓号</div>
+                <img src="img/register/logo3.png" alt="">
+            </a>
+            <div class="lianghao_yc">
+                <div class="upper">
+                    <a href="">
+                        <img src="img/register/search.png" alt="">
+                    </a>
+                    <input type="text" id="search" placeholder="搜索QQ靓号，如“1992”，“520”">
+                </div>
+                <div class="downer">
+                    <div>
+                         <a href="">生日</a>
+                        <a href="">爱情</a>
+                        <a href="">星座</a>
+                        <a href="">手机</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var hasFocus = null;
+            $('.lianghao').hover(function(){
+                hasFocus = false;
+                $('.lianghao_yc').css('display','block');
+                $('#search').focus(function(){
+                    $('.lianghao_yc').css('display','block');
+                    hasFocus = true;
+                 })
+            },function(){   
+                if(!hasFocus){
+                    $('.lianghao_yc').css('display','none');
+                }else{
+                    $('#search').blur(function(){
+                        $('.lianghao_yc').css('display','none');
+                    });
+                }   
+            });
+            
+        </script>
+    </div>
+    <div id="main_wrap">
+        <div id="main">
+            <div id="main_top">
+                <div class="main_top_top">欢迎注册QQ</div>
+                <div class="main_top_bot">
+                    <a href="">免费靓号</a>
+                    <h3>每一天，乐在沟通。</h3>
+                </div>
+            </div>
+            <div id="main_min">
+                <input type="text" id="uname" placeholder="昵称">
+                <input type="password" id="upwd" placeholder="密码">
+                <button id="btn">立即注册</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

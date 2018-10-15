@@ -4,7 +4,6 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-size: 12px;
 }
 
 body {
@@ -36,6 +35,10 @@ body {
   height: 30px;
   background: url("../img/bg.png") no-repeat -122px -153px;
   margin: 0 auto;
+}
+#fix a:hover {
+  background: #f74a4a;
+  border-color: #f74a4a;
 }
 
 #header {
@@ -304,6 +307,7 @@ header #head_right #right_last {
   float: left;
   color: #aaa8a8;
   border: 0;
+  font-size: 100%;
 }
 #top .search button {
   width: 38px;
@@ -815,6 +819,13 @@ nav .car:hover .car_box {
 .content1_left_top em {
   font: 18px/24px 'Microsoft Yahei';
 }
+.content1_left_top a {
+  color: #1994eb;
+  float: right;
+}
+.content1_left_top a:hover {
+  text-decoration: underline;
+}
 
 .red {
   color: #f74a4a;
@@ -986,10 +997,7 @@ nav .car:hover .car_box {
   color: #e3e3e3;
 }
 #content2er #content2 #content2_left .content1_left_top a {
-  color: #1994eb;
-}
-#content2er #content2 #content2_left .content1_left_top a:hover {
-  text-decoration: underline;
+  float: none;
 }
 #content2er #content2 #content2_left .content2_left_bot {
   width: 960px;
@@ -1087,6 +1095,472 @@ nav .car:hover .car_box {
   display: block;
   height: 0;
   clear: both;
+}
+
+#content3er {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#content3er #content3 {
+  width: 1190px;
+  height: 360px;
+  margin: 0 auto;
+}
+#content3er #content3 #content3_left .content1_left_top s {
+  background: url("../img/icon.png") no-repeat -90px -73px;
+}
+#content3er #content3 #content3_left .content3_left_bot {
+  height: 316px;
+  background: #fff;
+  padding: 10px 0 0 10px;
+}
+#content3er #content3 #content3_left .content3_left_bot a {
+  display: block;
+  width: 383px;
+  margin-right: 10px;
+  height: 158px;
+  overflow: hidden;
+  float: left;
+  color: #3a3f4a;
+}
+#content3er #content3 #content3_left .content3_left_bot a img {
+  display: block;
+  width: 383px;
+  height: 148px;
+}
+#content3er #content3 #content3_left .content3_left_bot::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+#content3er #content3::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#content4er {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#content4er #content4 {
+  width: 1190px;
+  height: 338px;
+  margin: 0 auto;
+}
+#content4er #content4 #content4_top .content1_left_top s {
+  background-position: -120px -71px;
+}
+#content4er #content4 #content4_top .content5 s {
+  background-position-x: -150px;
+}
+#content4er #content4 #content4_top .content6 s {
+  background-position-x: -180px;
+}
+#content4er #content4 #content4_top .content7 s {
+  background-position-y: -103px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_left {
+  width: 240px;
+  height: 304px;
+  overflow: hidden;
+  float: left;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_left a img {
+  display: block;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min {
+  background: #fff;
+  width: 764px;
+  overflow: hidden;
+  float: left;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min ul .gray {
+  color: #b0b0b0;
+  text-decoration: line-through;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min ul::after {
+  content: '';
+  height: 0;
+  display: block;
+  clear: both;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_top li {
+  float: left;
+  border-right: 1px solid #f3f4f6;
+  width: 190px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_top li a {
+  display: block;
+  width: 148px;
+  height: 163px;
+  padding: 20px;
+  border-bottom: 1px solid #f3f4f6;
+  line-height: 20px;
+  transition: all .2s linear;
+  color: #3a3f4a;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_top li a span {
+  display: block;
+  height: 20px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_top li a span strong {
+  font-size: 16px;
+  font-weight: bold;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_top li a .mar {
+  padding-bottom: 3px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_top li a img {
+  display: block;
+  width: 90px;
+  height: 75px;
+  display: block;
+  margin-top: 10px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_top li a:hover {
+  transform: translateX(5px);
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot li {
+  float: left;
+  border-right: 1px solid #f3f4f6;
+  width: 170px;
+  height: 60px;
+  padding: 20px 0 20px 20px;
+  line-height: 20px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot li > a {
+  display: block;
+  float: left;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot li > a img {
+  display: block;
+  width: 60px;
+  height: 50px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot li div {
+  margin-left: 70px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot li div p {
+  height: 20px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot li div p a {
+  color: #3a3f4a;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot li div p a:hover {
+  color: #f74a4a;
+  text-decoration: underline;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_min .content4_bot_min_bot::after {
+  content: '';
+  height: 0;
+  display: block;
+  clear: both;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right {
+  width: 186px;
+  float: right;
+  background: #fff;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .c {
+  padding: 5px 5px 5px 0;
+  border-top: 1px solid #f3f4f6;
+  height: 43px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .c i {
+  height: 24px;
+  line-height: 20px;
+  float: left;
+  width: 20px;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  background: url("../img/icon.png") no-repeat -20px -300px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .c div {
+  float: left;
+  width: 88px;
+  margin: 0 0 0 10px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .c div a {
+  color: #3a3f4a;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .c div a:hover {
+  color: #f74a4a;
+  text-decoration: underline;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .c a {
+  display: block;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .c a img {
+  display: block;
+  width: 40px;
+  height: 34px;
+  margin-top: 1px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .t {
+  padding-top: 20px;
+  height: 62px;
+  border-top: 0;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .t i {
+  height: 53px;
+  background-position-x: 0;
+  line-height: 16px;
+}
+#content4er #content4 #content4_top #content4_bot .content4_bot_right .t img {
+  width: 60px;
+  height: 50px;
+}
+#content4er #content4 #content4_top::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#bottomer {
+  width: 100%;
+}
+#bottomer #bottom {
+  width: 1190px;
+  height: 146px;
+  margin: 0 auto;
+}
+#bottomer #bottom li {
+  float: left;
+  margin-right: 10px;
+}
+#bottomer #bottom li a {
+  display: block;
+}
+#bottomer #bottom li a img {
+  display: block;
+  width: 390px;
+  height: 146px;
+}
+#bottomer #bottom li:last-child {
+  margin-right: 0;
+}
+#bottomer #bottom::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#footer {
+  background: #3b3f4a;
+  width: 100%;
+  margin-top: 40px;
+}
+#footer #foot {
+  width: 1190px;
+  height: 356px;
+  margin: 0 auto;
+}
+#footer #foot #foot_top {
+  padding: 25px 0 33px 0;
+}
+#footer #foot #foot_top .foot_top_con {
+  width: 222px;
+  height: 150px;
+  float: left;
+  border-right: 1px solid #444853;
+}
+#footer #foot #foot_top .foot_top_con h4 {
+  font: normal 16px/32px "Microsoft YaHei";
+  color: #acb1bb;
+}
+#footer #foot #foot_top .foot_top_con h4 s {
+  background: url("../img/icon.png") no-repeat 0 -136px;
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 0 24px;
+}
+#footer #foot #foot_top .foot_top_con h4 .a {
+  background-position-x: -32px;
+}
+#footer #foot #foot_top .foot_top_con h4 .b {
+  background-position-x: -63px;
+}
+#footer #foot #foot_top .foot_top_con h4 .c {
+  background-position-x: -95px;
+}
+#footer #foot #foot_top .foot_top_con ul {
+  margin-left: 65px;
+}
+#footer #foot #foot_top .foot_top_con ul li {
+  width: 100px;
+  height: 24px;
+  line-height: 24px;
+}
+#footer #foot #foot_top .foot_top_con ul li a {
+  color: #acb1bb;
+  font-size: 12px;
+}
+#footer #foot #foot_top .foot_top_con ul li a:hover {
+  text-decoration: underline;
+}
+#footer #foot #foot_top .foot_top_right {
+  width: 286px;
+  float: left;
+  height: 150px;
+  padding-left: 12px;
+}
+#footer #foot #foot_top .foot_top_right dl {
+  float: left;
+  margin-left: 40px;
+  width: 100px;
+  height: auto;
+  line-height: 24px;
+}
+#footer #foot #foot_top .foot_top_right dl dt {
+  display: block;
+  margin-bottom: 18px;
+  width: 100px;
+  height: 100px;
+}
+#footer #foot #foot_top .foot_top_right dl dt img {
+  display: block;
+}
+#footer #foot #foot_top .foot_top_right dl dd {
+  font-size: 16px;
+  color: #a4abb4;
+  line-height: 18px;
+  text-align: center;
+}
+#footer #foot #foot_top::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+#footer #foot #foot_bot {
+  height: 117px;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #81858f;
+  border-top: 1px solid #444853;
+  line-height: 19px;
+}
+#footer #foot #foot_bot p a {
+  color: #81858f;
+}
+#footer #foot #foot_bot p a:hover {
+  text-decoration: underline;
+}
+
+#login {
+  display: none;
+  width: 618px;
+  height: 360px;
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  border: 2px solid #eee;
+}
+#login #clone {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#login #clone a {
+  display: block;
+  width: 47px;
+  height: 20px;
+  float: right;
+  background: url("../img/login.png") no-repeat -221px -126px;
+}
+#login #clone a:hover {
+  background-position-y: -151px;
+}
+#login #login_txt {
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+  margin: 32px auto 36px;
+}
+#login #login_txt .title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+#login #login_txt p {
+  height: 21px;
+}
+#login #login_txt p a {
+  color: #3481cf;
+}
+#login #login_txt p a:hover {
+  text-decoration: underline;
+}
+#login #login_form {
+  width: 272px;
+  margin: 0 auto;
+}
+#login #login_form input {
+  width: 258px;
+  height: 18px;
+  padding: 12px 3px 12px 10px;
+  margin-bottom: 13px;
+  line-height: 18px;
+  border: 0;
+  font-size: 14px;
+  color: #333;
+  background: url("../img/login.png") no-repeat -1px -1px;
+}
+#login #login_form button {
+  background: #86ce2f;
+  width: 272px;
+  height: 40px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 35px;
+  border: 0;
+}
+#login #login_bottom {
+  height: 16px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+#login #login_bottom a {
+  color: #666;
+}
+#login #login_bottom a:hover {
+  text-decoration: underline;
+}
+#login #login_bottom span {
+  color: #bfbfbf;
+  margin: 0 5px;
+}
+
+#login_wrap {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  background-color: #e6f5ff;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
