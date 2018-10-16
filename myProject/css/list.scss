@@ -1,0 +1,562 @@
+@charset"utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background: #f3f4f6;
+    font:12px/1.5 arial,sans-serif;
+    color: #2e2e2e;;
+}
+@mixin head($w,$h) {
+    width: $w;
+    height: $h;
+    margin: 0 auto;
+}
+#header{
+    width: 100%;
+    background: #f9f9f9;
+}
+header{
+    @include head(1190px,30px);
+    color:#666;
+    em{
+        background: url("../img/img_list/indexico.png") no-repeat -42px -823px;
+        display: block;
+    }
+    a{
+        color:#666;
+        line-height: 30px;
+        em{
+            float: left;
+            width: 11px;
+            height: 15px;
+            margin: 7px 3px 0 0;
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    i{
+        margin: 0 10px;
+        line-height: 30px;
+        color: #e7e7e7;
+        font-style: normal;
+    }
+    #head_left{
+        li{
+            float: left;
+        }
+        i{
+            float: left;
+        }
+    }
+    #head_right{
+        width: 600px;
+        float: right;
+        div{
+            float: right;
+            position: relative;
+            p{
+                padding-bottom: 5px;
+                width: 94px;
+                background: #fff;
+                position: absolute;
+                display:none;
+                top: 1px;
+                left: -11px;
+                z-index: 1;
+                border: 1px solid #e7e7e7;
+                a{
+                    display: block;
+                    margin-top: 26px;
+                    padding-left: 10px;
+                    line-height: 26px;
+                    height: 26px;
+                }
+            }
+            .games{
+                position: absolute;
+                font: normal 12px Tahoma, "simsun";
+                width: 828px;
+                top: 26px;
+                right: 0;
+                z-index: 10000;
+                display: none;
+                .games_top{
+                    height: 11px;
+                    padding-left: 7px;
+                    background: url('../img/gamearea.png') no-repeat;
+                    overflow: hidden;
+                    span{
+                        display: block;
+                        width: 820px;
+                        height: 11px;
+                        background: url('../img/gamearea.png') no-repeat 100% 0;
+                    }
+                }
+                .games_main{
+                    float: left;
+                    background: url('../img/gamearea.png') no-repeat 0 bottom;
+                    padding-left:8px; 
+                    .games_inner{
+                        float: left;
+                        background: url('../img/gamearea.png') no-repeat 100% bottom;
+                        overflow: hidden;
+                        padding: 0 8px 7px 0;
+                        .games_names{
+                            float: left;
+                            h2{
+                                height: 33px;
+                                line-height: 33px;
+                                background: url('../img/gamearea.png') no-repeat 0 -13px;
+                                font-size: 12px;
+                                color: #0096d0;
+                                text-indent: 8px;
+                                border: 1px solid #d6d6d6;
+                                border-top: 0;
+                                border-left: 0;  
+                            }
+                            div{
+                                width: 102px;
+                                float: left;
+                                margin: 0 -1px 0 0;
+                                a{
+                                    display: block;
+                                    width: 85px;
+                                    height: 27px;
+                                    padding: 0 8px;
+                                    line-height: 27px;
+                                    background:url('../img/gamearea.png') no-repeat 0 -19px;
+                                    color: #464646;
+                                    text-decoration: none;
+                                    border: 1px solid #d6d6d6;
+                                    border-top: 0;
+                                    border-left: 0;
+                                    &:hover{
+                                        color: #0896D4;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        i{
+            float: right;
+        }
+        a{
+            position: relative;
+            z-index: 2;
+            em{
+                height: 13px;
+                float: right;
+                margin:7px 0 0 12px;
+                background:url('../img/icon.png') no-repeat 0 -52px;
+            }
+        }
+        #right_last{
+            display: block;
+            margin-top: 5px;
+            padding-left: 8px;
+            line-height: 21px;
+            width: 72px;
+            height: 21px;
+            background: url('../img/icon.png') no-repeat -20px -334px;
+        }
+    }
+}
+#searcher{
+    width: 100%;
+    height: 255px;
+    background: url('../img/img_list/bg-head.jpg') no-repeat top center;
+    #search{
+        @include head(1190px,125px);
+        .logo{
+            float: left;
+            margin: 37px 0 0;
+            width: 280px;
+            height: 52px;
+            a{
+                display: block;
+                width: 280px;
+                height: 55px;
+                background:url('../img/img_list/navico.png') no-repeat -670px -5px;
+                display: block;
+                text-indent: -9999em;
+            }
+        }
+        .sbar{
+            position: relative;
+            float: left;
+            margin: 39px 65px 0 100px;
+            width: 522px;
+            height: 51px;
+            background:url('../img/img_list/navico.png') no-repeat  -999px 0;
+            a{
+                position: absolute;
+                top: 2px;
+                right: 0;
+                z-index: 2;
+                width: 49px;
+                height: 46px;
+                background:url('../img/img_list/navico.png') no-repeat -1558px 0;
+                text-indent: -9999px;
+                display: block;
+                cursor: pointer;
+            }
+            input{
+                float: left;
+                margin: 1px 0 0 6px;
+                width: 450px;
+                padding: 14px 10px 15px 10px;
+                height: 18px;
+                line-height: 18px;
+                border: 0;
+                color: #9f9f9f;
+                font-size: 14px;
+                background: none;
+                &:hover{
+                    color:#fff;
+                }
+            }
+        }
+        .gamelogo{
+            float: left;
+            margin: 37px 0 0;
+            width: 223px;
+            height: 59px;
+            a{
+                width: 223px;
+                height: 59px;
+                background:url('../img/img_list/navico.png') no-repeat -437px -5px;
+                display: block;
+                text-indent: -9999em;
+            }
+        }  
+    }
+    #nav{
+        @include head(1190px,76px);
+        background: url('../img/img_list/navico.png') no-repeat -5px -187px;
+        ul{
+            float: left;
+            width: 940px;
+            height: 76px;
+            position: relative;
+            li{
+                float: left;
+                a{
+                    display: block;
+                    width: 134px;
+                    height: 76px;
+                    display: block;
+                    text-align: center;                   
+                    line-height: 76px;                   
+                    font-size: 18px;             
+                    color: #9f9f9f; 
+                    &:hover{
+                        color: #ff5900;
+                    }            
+                }
+            }
+        }
+        .buy_car{
+            float: right;
+            width: 192px;
+            height: 76px;
+            line-height: 76px;
+            text-align: center;
+            font-size: 18px;
+            position: relative;
+            a{
+                width: 192px;
+                color: #ff5900; 
+                text-indent: 18px;
+                i{
+                    position: absolute;
+                    right: 15px;
+                    z-index: 10;
+                    width: 60px;
+                    height: 76px;
+                    line-height: 76px;
+                    text-align: center;
+                    font-size: 18px;
+                    display: block;
+                    font-style: normal;
+                    text-indent: 0;
+                }
+                s{
+                    position: absolute;
+                    top: 24px;
+                    left: 36px;
+                    z-index: 10;
+                    width: 28px;
+                    height: 24px;
+                    background:url('../img/img_list/navico.png') -237px -5px;
+                    display: block;
+                }
+            }
+        }
+    }
+    #nav_small{
+        @include head(1190px,54px);
+        line-height: 54px;
+        margin-top: 2px;
+        text-align: center;
+        background: #e6e6e8;
+        ul{
+            li{
+                float: left;
+                .long{
+                    width: 152px;
+                }
+                a{
+                    display: block;
+                    width: 118px;
+                    height: 52px;
+                    font-size: 14px;
+                    color: #222;
+                    &:hover{
+                        color:#36ab87;
+                    }
+                }
+            }
+        }
+    }
+}
+#linkser{
+    width: 100%;
+    margin-bottom: 8px;
+    #links{
+        @include head(1190px,18px);
+        div{
+            margin: 24px 0 8px;
+            cursor: pointer;
+            color: #606060;
+            a{
+                color: #3a3f4a;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+#main{
+    @include head(1190px,auto);
+    overflow: hidden;
+    #side{
+        width: 228px;
+        float: left;
+        #like{
+            margin-top: 10px;
+            padding-right:13px;
+            background: #fafbfc; 
+            h3{
+                height: 47px;
+                line-height: 47px;
+                font-size: 16px;
+                color: #555;
+                margin-left: 18px;
+                border-bottom: 2px solid #f3f4f6;
+                text-indent: 6px;
+                span{
+                    display: block;
+                    width: 80px;
+                    border-bottom: 2px solid #36ab87;
+                }
+            }
+            #like_con{
+                margin-left: 20px;
+                padding-bottom: 10px;
+                li{
+                    border-bottom: 1px dashed #e7e7e7;
+                    a{
+                        overflow: hidden;
+                        color:#222;
+                        display: block;
+                        padding-top: 15px;
+                        .like_left{
+                            float: left;
+                            img{
+                                display: block;
+                                width: 76px;
+                                height: 54px;
+                            }
+                        }
+                        .like_right{
+                            width: 108px;
+                            float: right;
+                            .one{
+                                font-size: 12px;
+                                height: 14px;
+                                line-height: 12px;
+                                font-weight: bold;
+                            }
+                            .two{
+                                margin-top: 8px;
+                                height: 15px;
+                            }
+                            .three{
+                                font-size: 12px;
+                                margin-top: 3px;
+                                color: #333;
+                                height: 18px;
+                                padding-bottom: 15px;
+                            }
+                        }
+                        &:hover{
+                            .one{
+                                color:#36ab87;
+                                text-decoration: underline;
+                            }
+                            .three{
+                                color: #ff5900;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #content{
+        width: 952px;
+        float: right;
+        #content_top{
+            background: #fafbfc;
+            padding: 30px 0 14px;
+            #shop{
+                width: 888px;
+                height: 360px;
+                margin-left: 58px;
+                .shop_left{
+                    margin-top: 35px;
+                    float: left;
+                    img{
+                        display: block;
+                        width: 260px;
+                        height: 154px;
+                    }
+                    .fdj{
+                        width: 16px;
+                        height: 15px;
+                        background: url('../img/img_list/comico.png') no-repeat -5px -969px;
+                        float: right;
+                        margin-top: 2px;
+                        cursor: pointer;
+                    }
+                    a{
+                        display: block;
+                        width: 68px;
+                        height: 25px;
+                        line-height: 27px;
+                        background: url('../img/img_list/comico.png') no-repeat -5px -521px;
+                        margin: 5px 0 0 70px;
+                        color: #9f9f9f;
+                        text-indent: 19px;
+                        background-color: transparent;
+                    }
+                    
+                }
+                .shop_right{
+                    margin-left: 23px;
+                    float: left;
+                    h2{
+                        font-size: 18px;
+                        text-indent: 15px;
+                        color: #2e2e2e;
+                        margin-top: 10px;
+                        line-height: 30px;
+                        height: 30px;
+                    }
+                    .shop_price{
+                        margin-top: 6px;
+                        width: 456px;
+                        height: 76px;
+                        background: url('../img/img_list/comico.png') no-repeat -5px -143px;
+                        p{
+                            text-indent: 15px;
+                            font-size: 14px;
+                            height: 30px; 
+                            padding-top: 10px;
+                            line-height: 30px;
+                            color: #606060;
+                        }
+                        div{
+                            text-indent: 15px;
+                            font-size: 14px;
+                            height: 30px; 
+                            line-height: 30px;
+                            color: #606060;
+                            i{
+                                font:bold 24px Arial;
+                                font-style: normal;
+                                color:#ff5900;
+                            }
+                        }
+                    }
+                    .date{
+                        padding-top: 18px;
+                        height: 30px;
+                        font-size: 14px;
+                        color: #606060;
+                        line-height: 30px;
+                        text-indent: 15px;
+                    }
+                    #btns{
+                        a{
+                            margin: 10px 9px 0 15px;
+                            display: block;
+                            width: 142px;
+                            height: 42px;
+                            line-height: 42px;
+                            text-align: center;
+                            font-size: 18px;
+                            color: #fff;
+                            float: left;
+                        }
+                        #join_car{
+                            
+                            background: #ff5900;
+                            &:hover{
+                                background: #f25806;
+                            }
+                        }
+                        #th{
+                            background: #259afe;;    ;
+                            &:hover{
+                                background: #1c91f5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bigImg{
+    display: none;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    z-index: 10;
+    top: 536px;
+    left: 564px;
+    padding: 15px;
+    box-shadow: 0 0 60px -10px gray;
+    img{
+        width: 1px;
+        display: block;
+    }
+    a{
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        display: block;
+    }
+    
+}

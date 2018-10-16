@@ -1,0 +1,105 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; }
+
+body { background: #f3f4f6; font: 12px/1.5 arial,sans-serif; color: #2e2e2e; }
+
+#header { width: 100%; background: #f9f9f9; }
+
+header { width: 1190px; height: 30px; margin: 0 auto; color: #666; }
+header em { background: url("../img/img_list/indexico.png") no-repeat -42px -823px; display: block; }
+header a { color: #666; line-height: 30px; }
+header a em { float: left; width: 11px; height: 15px; margin: 7px 3px 0 0; }
+header a:hover { text-decoration: underline; }
+header i { margin: 0 10px; line-height: 30px; color: #e7e7e7; font-style: normal; }
+header #head_left li { float: left; }
+header #head_left i { float: left; }
+header #head_right { width: 600px; float: right; }
+header #head_right div { float: right; position: relative; }
+header #head_right div p { padding-bottom: 5px; width: 94px; background: #fff; position: absolute; display: none; top: 1px; left: -11px; z-index: 1; border: 1px solid #e7e7e7; }
+header #head_right div p a { display: block; margin-top: 26px; padding-left: 10px; line-height: 26px; height: 26px; }
+header #head_right div .games { position: absolute; font: normal 12px Tahoma, "simsun"; width: 828px; top: 26px; right: 0; z-index: 10000; display: none; }
+header #head_right div .games .games_top { height: 11px; padding-left: 7px; background: url("../img/gamearea.png") no-repeat; overflow: hidden; }
+header #head_right div .games .games_top span { display: block; width: 820px; height: 11px; background: url("../img/gamearea.png") no-repeat 100% 0; }
+header #head_right div .games .games_main { float: left; background: url("../img/gamearea.png") no-repeat 0 bottom; padding-left: 8px; }
+header #head_right div .games .games_main .games_inner { float: left; background: url("../img/gamearea.png") no-repeat 100% bottom; overflow: hidden; padding: 0 8px 7px 0; }
+header #head_right div .games .games_main .games_inner .games_names { float: left; }
+header #head_right div .games .games_main .games_inner .games_names h2 { height: 33px; line-height: 33px; background: url("../img/gamearea.png") no-repeat 0 -13px; font-size: 12px; color: #0096d0; text-indent: 8px; border: 1px solid #d6d6d6; border-top: 0; border-left: 0; }
+header #head_right div .games .games_main .games_inner .games_names div { width: 102px; float: left; margin: 0 -1px 0 0; }
+header #head_right div .games .games_main .games_inner .games_names div a { display: block; width: 85px; height: 27px; padding: 0 8px; line-height: 27px; background: url("../img/gamearea.png") no-repeat 0 -19px; color: #464646; text-decoration: none; border: 1px solid #d6d6d6; border-top: 0; border-left: 0; }
+header #head_right div .games .games_main .games_inner .games_names div a:hover { color: #0896D4; }
+header #head_right i { float: right; }
+header #head_right a { position: relative; z-index: 2; }
+header #head_right a em { height: 13px; float: right; margin: 7px 0 0 12px; background: url("../img/icon.png") no-repeat 0 -52px; }
+header #head_right #right_last { display: block; margin-top: 5px; padding-left: 8px; line-height: 21px; width: 72px; height: 21px; background: url("../img/icon.png") no-repeat -20px -334px; }
+
+#searcher { width: 100%; height: 255px; background: url("../img/img_list/bg-head.jpg") no-repeat top center; }
+#searcher #search { width: 1190px; height: 125px; margin: 0 auto; }
+#searcher #search .logo { float: left; margin: 37px 0 0; width: 280px; height: 52px; }
+#searcher #search .logo a { display: block; width: 280px; height: 55px; background: url("../img/img_list/navico.png") no-repeat -670px -5px; display: block; text-indent: -9999em; }
+#searcher #search .sbar { position: relative; float: left; margin: 39px 65px 0 100px; width: 522px; height: 51px; background: url("../img/img_list/navico.png") no-repeat -999px 0; }
+#searcher #search .sbar a { position: absolute; top: 2px; right: 0; z-index: 2; width: 49px; height: 46px; background: url("../img/img_list/navico.png") no-repeat -1558px 0; text-indent: -9999px; display: block; cursor: pointer; }
+#searcher #search .sbar input { float: left; margin: 1px 0 0 6px; width: 450px; padding: 14px 10px 15px 10px; height: 18px; line-height: 18px; border: 0; color: #9f9f9f; font-size: 14px; background: none; }
+#searcher #search .sbar input:hover { color: #fff; }
+#searcher #search .gamelogo { float: left; margin: 37px 0 0; width: 223px; height: 59px; }
+#searcher #search .gamelogo a { width: 223px; height: 59px; background: url("../img/img_list/navico.png") no-repeat -437px -5px; display: block; text-indent: -9999em; }
+#searcher #nav { width: 1190px; height: 76px; margin: 0 auto; background: url("../img/img_list/navico.png") no-repeat -5px -187px; }
+#searcher #nav ul { float: left; width: 940px; height: 76px; position: relative; }
+#searcher #nav ul li { float: left; }
+#searcher #nav ul li a { display: block; width: 134px; height: 76px; display: block; text-align: center; line-height: 76px; font-size: 18px; color: #9f9f9f; }
+#searcher #nav ul li a:hover { color: #ff5900; }
+#searcher #nav .buy_car { float: right; width: 192px; height: 76px; line-height: 76px; text-align: center; font-size: 18px; position: relative; }
+#searcher #nav .buy_car a { width: 192px; color: #ff5900; text-indent: 18px; }
+#searcher #nav .buy_car a i { position: absolute; right: 15px; z-index: 10; width: 60px; height: 76px; line-height: 76px; text-align: center; font-size: 18px; display: block; font-style: normal; text-indent: 0; }
+#searcher #nav .buy_car a s { position: absolute; top: 24px; left: 36px; z-index: 10; width: 28px; height: 24px; background: url("../img/img_list/navico.png") -237px -5px; display: block; }
+#searcher #nav_small { width: 1190px; height: 54px; margin: 0 auto; line-height: 54px; margin-top: 2px; text-align: center; background: #e6e6e8; }
+#searcher #nav_small ul li { float: left; }
+#searcher #nav_small ul li .long { width: 152px; }
+#searcher #nav_small ul li a { display: block; width: 118px; height: 52px; font-size: 14px; color: #222; }
+#searcher #nav_small ul li a:hover { color: #36ab87; }
+
+#linkser { width: 100%; margin-bottom: 8px; }
+#linkser #links { width: 1190px; height: 18px; margin: 0 auto; }
+#linkser #links div { margin: 24px 0 8px; cursor: pointer; color: #606060; }
+#linkser #links div a { color: #3a3f4a; }
+#linkser #links div a:hover { color: #000; }
+
+#main { width: 1190px; height: auto; margin: 0 auto; overflow: hidden; }
+#main #side { width: 228px; float: left; }
+#main #side #like { margin-top: 10px; padding-right: 13px; background: #fafbfc; }
+#main #side #like h3 { height: 47px; line-height: 47px; font-size: 16px; color: #555; margin-left: 18px; border-bottom: 2px solid #f3f4f6; text-indent: 6px; }
+#main #side #like h3 span { display: block; width: 80px; border-bottom: 2px solid #36ab87; }
+#main #side #like #like_con { margin-left: 20px; padding-bottom: 10px; }
+#main #side #like #like_con li { border-bottom: 1px dashed #e7e7e7; }
+#main #side #like #like_con li a { overflow: hidden; color: #222; display: block; padding-top: 15px; }
+#main #side #like #like_con li a .like_left { float: left; }
+#main #side #like #like_con li a .like_left img { display: block; width: 76px; height: 54px; }
+#main #side #like #like_con li a .like_right { width: 108px; float: right; }
+#main #side #like #like_con li a .like_right .one { font-size: 12px; height: 14px; line-height: 12px; font-weight: bold; }
+#main #side #like #like_con li a .like_right .two { margin-top: 8px; height: 15px; }
+#main #side #like #like_con li a .like_right .three { font-size: 12px; margin-top: 3px; color: #333; height: 18px; padding-bottom: 15px; }
+#main #side #like #like_con li a:hover .one { color: #36ab87; text-decoration: underline; }
+#main #side #like #like_con li a:hover .three { color: #ff5900; }
+#main #content { width: 952px; float: right; }
+#main #content #content_top { background: #fafbfc; padding: 30px 0 14px; }
+#main #content #content_top #shop { width: 888px; height: 360px; margin-left: 58px; }
+#main #content #content_top #shop .shop_left { margin-top: 35px; float: left; }
+#main #content #content_top #shop .shop_left img { display: block; width: 260px; height: 154px; }
+#main #content #content_top #shop .shop_left .fdj { width: 16px; height: 15px; background: url("../img/img_list/comico.png") no-repeat -5px -969px; float: right; margin-top: 2px; cursor: pointer; }
+#main #content #content_top #shop .shop_left a { display: block; width: 68px; height: 25px; line-height: 27px; background: url("../img/img_list/comico.png") no-repeat -5px -521px; margin: 5px 0 0 70px; color: #9f9f9f; text-indent: 19px; background-color: transparent; }
+#main #content #content_top #shop .shop_right { margin-left: 23px; float: left; }
+#main #content #content_top #shop .shop_right h2 { font-size: 18px; text-indent: 15px; color: #2e2e2e; margin-top: 10px; line-height: 30px; height: 30px; }
+#main #content #content_top #shop .shop_right .shop_price { margin-top: 6px; width: 456px; height: 76px; background: url("../img/img_list/comico.png") no-repeat -5px -143px; }
+#main #content #content_top #shop .shop_right .shop_price p { text-indent: 15px; font-size: 14px; height: 30px; padding-top: 10px; line-height: 30px; color: #606060; }
+#main #content #content_top #shop .shop_right .shop_price div { text-indent: 15px; font-size: 14px; height: 30px; line-height: 30px; color: #606060; }
+#main #content #content_top #shop .shop_right .shop_price div i { font: bold 24px Arial; font-style: normal; color: #ff5900; }
+#main #content #content_top #shop .shop_right .date { padding-top: 18px; height: 30px; font-size: 14px; color: #606060; line-height: 30px; text-indent: 15px; }
+#main #content #content_top #shop .shop_right #btns a { margin: 10px 9px 0 15px; display: block; width: 142px; height: 42px; line-height: 42px; text-align: center; font-size: 18px; color: #fff; float: left; }
+#main #content #content_top #shop .shop_right #btns #join_car { background: #ff5900; }
+#main #content #content_top #shop .shop_right #btns #join_car:hover { background: #f25806; }
+#main #content #content_top #shop .shop_right #btns #th { background: #259afe; }
+#main #content #content_top #shop .shop_right #btns #th:hover { background: #1c91f5; }
+
+.bigImg { display: none; width: 1px; height: 1px; position: absolute; z-index: 10; top: 536px; left: 564px; padding: 15px; box-shadow: 0 0 60px -10px gray; }
+.bigImg img { width: 1px; display: block; }
+.bigImg a { position: absolute; top: -15px; right: -15px; display: block; }
+
+/*# sourceMappingURL=list.css.map */

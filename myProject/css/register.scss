@@ -36,7 +36,7 @@ html,body{
 }
 /*------------头部------------------*/
 #header{
-    overflow: hidden;
+    position: relative;
     &>div{
         float: right;
         margin: 20px 40px 0 0;
@@ -57,6 +57,7 @@ html,body{
     }
     .chinese{
         color: #000;
+        position: relative;
         div{
             opacity: .6;
             .down{
@@ -67,6 +68,7 @@ html,body{
             }
         }
         ul{
+            position: absolute;
             display: none;
             padding-top: 8px;
             text-align: left;
@@ -93,6 +95,7 @@ html,body{
     }
     .lianghao{
         padding: 0;
+        position: relative;
         a{
             display: block;
             float: right;
@@ -115,6 +118,9 @@ html,body{
             }
         }
         .lianghao_yc{
+            position: absolute;
+            right: 0;
+            top: 100%;
             display: none;
             clear: both;
             width: 290px;
@@ -173,6 +179,12 @@ html,body{
             }
         }
     }
+    &::after{
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+    }
 }
 /*------------主体------------------*/
 #main_wrap{
@@ -208,7 +220,6 @@ html,body{
         
     }
     #main_min{
-        height: 488px;
         input{
             margin-top: 24px;
             border: 1px #aaa solid;
@@ -219,9 +230,145 @@ html,body{
             height: 50px;
             line-height: 50px;
             padding: 0 20px;
+            &:hover{
+                border-color: #777;
+            }
         }
         #uname{
             margin-top: 0;
         }
+        #telphone{
+            margin-top: 24px;
+            height: 52px;
+            .phone_show{
+                width: 154px;
+                height: 52px;
+                position: relative;
+                float: left;
+                input{
+                    margin-top: 0;
+                    width: 112px;
+                }
+                div{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 52px;
+                    line-height: 52px;
+                    padding-right: 12px;
+                    #upImg{
+                        display: none;
+                    }
+                }
+                ul{
+                    display: none;
+                    position: absolute;
+                    width: 480px;
+                    height: 200px;
+                    border: 1px solid #b2b2b2;
+                    background: #fff;
+                    font-size: 20px;
+                    overflow-y: scroll;
+                    li{
+                        cursor: pointer;
+                        padding: 0 20px;
+                        line-height: 48px;
+                        height: 48px;
+                        &:hover{
+                            background:#eee;
+                        }
+                    }
+                }
+            }
+            .phone{
+                float: right;
+                margin: 0;
+                input{
+                    margin: 0;
+                    width: 265px;
+                }
+            }
+        }
+        .ts{
+            height: 14px;
+            font-size: 14px;
+            color: #999;
+            margin-top: 8px;
+            line-height: 14px;
+        }
+        .yzm{
+            display: none;
+            height: 60px;
+            margin-top: 24px;
+            a{
+                display: block;
+                width: 307px;
+                height: 50px;
+                border: 1px solid #3083ff;
+                background: #3487ff;
+                text-align: center;
+                color: #fff;
+                float: right;
+                font-size: 20px;
+                line-height: 50px;
+                border-radius: 4px;
+            }
+            input{
+                width: 112px;
+                margin: 0;
+            }
+        }
+        #btn{
+            width: 476px;
+            height: 60px;
+            background: #3487ff;
+            color: #fff;
+            font-size: 24px;
+            margin: 40px 0 8px;
+            border: 1px #3083ff solid;;
+            border-radius: 4px;
+            &:hover{
+                background-color:#3580eb;
+            }
+        }
+        p{
+            display: none;
+            padding-top: 8px;
+            padding-left: 24px;
+            height: 18px;
+            font-size: 14px;
+            position: relative;
+            line-height: 18px;
+            background: url('../img/register/info.png') no-repeat 0 8px;
+
+        }
+        .red{
+            color:#ff5b5b;
+            background: url('../img/register/error.png') no-repeat 0 8px;
+        }
     }
+    #main_bot{
+        height: 114px;
+        margin-top: 16px;
+        line-height: 18px;
+        font-size: 14px;
+        label{
+            line-height: 30px;
+            font-size: 13px;
+            color: #aaa;
+            img{
+                vertical-align: middle;
+            }
+            .nr{
+                display: none;
+            }
+        }
+    }
+   
+}
+#footer{
+    font-size: 14px;
+    color: #bbb;
+    text-align: center;
+    margin: 30px 0;
 }

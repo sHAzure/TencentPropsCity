@@ -7,6 +7,7 @@
     <title>QQ注册</title>
     <link rel="stylesheet" href="css/register.css">
     <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/cookie.js"></script>
 </head>
 <body>
     <a href="" class="logo">QQ</a>
@@ -108,10 +109,160 @@
                 </div>
             </div>
             <div id="main_min">
-                <input type="text" id="uname" placeholder="昵称">
-                <input type="password" id="upwd" placeholder="密码">
+
+                <input type="text" id="uname" placeholder="昵称" name="uname" autocomplete='off'>
+                <p id="p1"></p>
+                <input type="password" id="upwd" placeholder="密码" name="upwd" autocomplete='off'>
+                <p id="p2"></p>
+                <div id="telphone">
+                    <div class="phone_show">
+                        <input type="text" name="" id="tel" value="+86">
+                        <div>
+                            <img src="img/register/down.png" alt="" id="downImg">
+                            <img src="img/register/up.png" alt="" id="upImg">
+                        </div>
+                        <ul>
+                            <li>中国 +86</li>
+                        </ul>
+                    </div>
+                    <script>
+                        $.getJSON('json/country.json',function(reponse){
+                            var arr = [];
+                            for(var key in reponse){
+                                $('.phone_show ul').append(`<li>${reponse[key][0]} ${reponse[key][1]}</li>`);
+                            }
+                            
+                        });
+                        
+                        $('#tel').focus(function(){
+                            $('.phone_show ul').css('display','block');
+                            $('#downImg').css('display','none');
+                            $('#upImg').css('display','inline-block');
+                        }).blur(function(){
+                            $('.phone_show ul').css('display','none');
+                            $('#downImg').css('display','inline-block');
+                            $('#upImg').css('display','none');
+                        });
+                    </script>
+                    <div class="phone">
+                        <input type="text" id="ios" autocomplete='off'>
+                    </div>
+                </div>
+                <p id="p3"></p>
+                <div class="ts">可通过该手机号找回密码</div>
+                <div class="yzm">
+                    <a href="javascript:;" id="send">发送短信验证码</a>
+                    <input type="text" placeholder="短信验证码" id="ios_yzm" autocomplete='off'>
+                    <p id="p4"></p>
+                </div>
                 <button id="btn">立即注册</button>
+                <p id="p5"></p>
             </div>
+            <div id="main_bot">
+                <label>
+                    <img src="img/register/checkbox_check.png" alt="" class="ch">
+                    <img src="img/register/checkbox_normal.png" alt="" class="nr">
+                    同时开通QQ空间
+                </label>
+                <br>
+                <label>
+                    <img src="img/register/checkbox_check.png" alt="" class="ch" data-bj="2">
+                    <img src="img/register/checkbox_normal.png" alt="" class="nr">
+                    我已阅读并同意相关服务条款和隐私政策
+                </label>
+            </div>
+            <script>
+                $('#main_bot').on('click','label',function(){
+                    if($(this).find('img').eq(0).hasClass('nr')){
+                        $(this).find('img').eq(0).removeClass();
+                        $(this).find('img').eq(1).addClass('nr');
+                        $(this).find('img').eq(0).attr('data-bj',2);
+                    }else{
+                        $(this).find('img').eq(0).addClass('nr');
+                        $(this).find('img').eq(1).removeClass();
+                        $(this).find('img').eq(0).attr('data-bj',1);
+                    }
+                });    
+            </script>
+        </div>
+        <script>
+            var flag1 = true,flag2,flag3,flag4,flag5;
+            again();
+            var uid = 0;
+            $('#btn').click(function(){
+                if($('#main_bot>label').eq(1).find('img').eq(0).attr('data-bj') == 1 ){
+                    flag5 = false;
+                }else{
+                    flag5 = true;
+                }
+                if(flag1 && flag2 && flag3 && flag4){
+                    if(!flag5){
+                        $('#p5').addClass('red');
+                        $('#p5').css('display','block');
+                        $('#p5').html('请先同意服务条款');
+                    }else{
+                        location.href = 'index.html';
+                    }
+                }
+            });
+            function again(){
+                $('#uname').blur(function(){
+                    flag1 = check($(this),/^.+$/,$('#p1'),"昵称不可以为空",'昵称不可以为空');
+                });
+
+                $('#upwd').blur(function(){
+                    flag2 = check($(this),/^((?=.*\d)(?=.*\D)|(?=.*[a-zA-Z])(?=.*[^a-zA-Z]))(?!^.*[\u4E00-\u9FA5].*$)^\S{6,16}$/,$('#p2'),"长度为8-16个字符","密码不能为空");
+                });
+
+                $('#ios').focus(function(){
+                    $('.yzm').css('display','block');
+                }).blur(function(){
+                    if($(this).val() == ''){
+                        $('.yzm').css('display','none');
+                    }
+                });
+
+                $('#send').focus(function(){
+                    flag3 = check($('#ios'),/^1[3,5,7,8][1-9]{9}$/,$('#p3'),'手机号有误','手机号有误');
+                    $('.ts').css('display','none');
+                    $(this).css({
+                        'background':'#f0f0f0',
+                        'color':'#ccc',
+                        'border-color':'transparent'
+                    })
+                });
+
+                $('#ios_yzm').focus(function(){
+                    if($('#ios').val() == ''){
+                        $('.yzm').css('display','none');
+                    }
+                }).blur(function(){
+                    flag4 = check($(this),/^[0-9a-zA-Z]{4}$/,$('#p4'),'请填写验证码','请填写验证码');
+                });
+            }
+            function check($obj,reg,$p,str,str2){
+                var flag;
+                $p.css('display','block');
+                if(reg.test($obj.val())){
+                    $p.remove();
+                    $obj.css('border-color','#aaa');
+                    flag = true;
+                    return flag;
+                }else{
+                    if($obj.val() == ''){
+                        $p.html(str2);
+                    }else{
+                        $p.html(str);
+                    }
+                    $p.addClass('red');
+                    $obj.css('border-color','#ff5b5b');
+                    flag = false;
+                    return flag;
+                }
+            }
+        </script>
+        <div id="footer">
+                Copyright <span>©</span> 1998-2018Tencent All Rights Reserved
         </div>
     </div>
     
